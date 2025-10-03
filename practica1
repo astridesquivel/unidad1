@@ -1,0 +1,355 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMvuG8losfgNTrVU+7MYgE9",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/astridesquivel/unidad1/blob/main/practica1\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "CVXupvSeQOau"
+      },
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Que es pandas en python?\n",
+        "pandas es una libreria  o bliblioteca de python que se utiliza para trabajar con conjuntos de datos tiene funciones para analizar,limpiar,explorar y manipular datos.\n",
+        "En nombre \"pandas\" hace referencia a  panel data\n",
+        "y python data.Fue creado en el 2008.\n",
+        "-------------------------\n",
+        "Porque utilizar pandas?\n",
+        "pandas nos permite analizar big data y sacr conclusiones en teorias estadistica.Los pandas pueden limpiar conjunto de dtaos desordenados y hacerlo legibles y relevantes.Los datos relevantes son muy importante en la ciencia de datos.\n",
+        "----------------------\n",
+        "Que podemos hacer pandas?\n",
+        "1-saber si existe correlacion entre dos o mas columnas.\n",
+        "2-cual es el valor del promedio\n",
+        "3-valor maximo.\n",
+        "4-valor minimo.\n",
+        "-----------------------\n",
+        "Pandas tambien puede eliminar filas que nososn relevantes o que contiene errores,como valores masivos esto se llama limpieza de datos.\n",
+        "Instalacion de datos.\n",
+        "si tienes python y pip instalado un sistema,instalalo usando el siguiente comando\n",
+        "PIP INSTALL PANDA\n",
+        "Si este comando falla utiliza una distribucion en python que ya tenga pandas instalado importar pandas una vez intalado pandas importalo a tus aplicaciones agregando la palabra clave:IMPORT PANDAS\n",
+        "Ahora pandas esta importando y listo para usar.Pandas como pd.Crea un alias con la palabra as al importar pandas.\n",
+        "-----------------\n",
+        "Ejemplo:\n",
+        "import pandas as pd\n",
+        "Ahora el paquete pandas puede dominarce pd en lugar de pandas.\n",
+        "Comprobando la version de pandas de cadena de la version se almacena en el atributo\n",
+        "--version--"
+      ],
+      "metadata": {
+        "id": "QN18dl0kQUez"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "\n",
+        "print(pd.__version__)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "P5QoGT7IU3KE",
+        "outputId": "53fa35b1-993f-45f6-ccd6-183e6a915b0e"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2.2.2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "EJERCICIO\n",
+        "Cual de la siguiente de las tres opciones es la biblioteca oficial de pandas?\n",
+        "1-import p\n",
+        "2-**import pandas**\n",
+        "3-import pan\n",
+        "--------------------\n",
+        "Pandas series.Que es una serie?\n",
+        "una serie pandas es como una columna en una tabla.\n",
+        "Es una matriz es unicodimencional que contiene datos de cualquier tipo."
+      ],
+      "metadata": {
+        "id": "oeoiDRU_VXHU"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "\n",
+        "a = [1,7,2]\n",
+        "myvar = pd.Series(a)\n",
+        "print(myvar)\n",
+        "print(myvar[0])\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WwP3nyskWGH0",
+        "outputId": "8a380f87-d03e-4d5d-f941-6f7d67a5ec8c"
+      },
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0    1\n",
+            "1    7\n",
+            "2    2\n",
+            "dtype: int64\n",
+            "1\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "ETIQUETAS:si no especificas nada mas,los valores se etiqueta con sunumero de indice el primer valor tiene el indice 0,el segundo valor indic (1),ect.\n",
+        "Esa etiqueta se puede utilizar para acceder  aun valor especifico."
+      ],
+      "metadata": {
+        "id": "0-H9xvslYE51"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Crea etiquetas.\n",
+        "Con el argumento index,podemos nombrar nuestras propias etiquetas,crea tus propoias etiquetas."
+      ],
+      "metadata": {
+        "id": "l9ZdSHcMY9MG"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "myvar = pd.Series(a,index = [\"x\",\"y\",\"z\"])\n",
+        "print(myvar)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "wjDk0fBKZU69",
+        "outputId": "9665ca5b-1b6d-4eb1-b113-b4fc12263940"
+      },
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "x    1\n",
+            "y    7\n",
+            "z    2\n",
+            "dtype: int64\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "cuando allamos creado etiquetas podemos acceder a un elemento haciendo referencia a su etiqueta devuelve el valor del \"y\""
+      ],
+      "metadata": {
+        "id": "XZrzxbJvZmgW"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(myvar[\"y\"])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3U70CCGJZ4Sl",
+        "outputId": "8d50fb22-2ee6-417b-f9f1-2607e4d87a00"
+      },
+      "execution_count": 19,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "7\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "objetos clave/valor como serie.\n",
+        "Tambien podemos utlizar como un diccionario al crear una serie ejemplo:crea una serie panda basica a partir de un diccionario."
+      ],
+      "metadata": {
+        "id": "wqxu_TvdZ8Sd"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "\n",
+        "calorias = {\"dia1\":420,\"dia2\":380,\"dia3\":390}\n",
+        "myvar = pd.Series(calorias)\n",
+        "print(myvar)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "zHpxpCMuaN4e",
+        "outputId": "51153b7e-fd3f-4736-e8d5-879fdaf8a806"
+      },
+      "execution_count": 23,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "dia1    420\n",
+            "dia2    380\n",
+            "dia3    390\n",
+            "dtype: int64\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "NOTA:\n",
+        "Las claves del diccionario se convierte en las etiquetas.\n",
+        "Para seleccionar elementos del diccionario utilize el argumento index y especifica el elemento que decea incluir en la serie\n",
+        "-----------------\n",
+        "EJEMPLO:\n",
+        "Crea una serie utilizando unicamente dia1,dia2"
+      ],
+      "metadata": {
+        "id": "R-1paVuCa6Qe"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "myvar = pd.Series(calorias,index = [\"dia1\",\"dia2\"])\n",
+        "print(myvar)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0tsK6gTxbdAe",
+        "outputId": "566cb3d4-9f3c-4e6c-d18b-02b7e52ef9aa"
+      },
+      "execution_count": 24,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "dia1    420\n",
+            "dia2    380\n",
+            "dtype: int64\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "DATA FRAMES:\n",
+        "Marcos de datos,con conjuntos de datos en pandas suelen ser tablas multidimencional,llamdas data frames.La series es como una columna,un data frame es toda la tabla.\n",
+        "----------------------------\n",
+        "EJEMPLO:\n",
+        "Crea una data frame a partir de dos series."
+      ],
+      "metadata": {
+        "id": "DzvdtmrVbog3"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "\n",
+        "data = {\n",
+        "    \"calories\":[420,380,390],\n",
+        "    \"duration\":[50,40,45]\n",
+        "}\n",
+        "myvar = pd.DataFrame(data)\n",
+        "print(myvar)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nNIorNFpcEve",
+        "outputId": "9867fb96-91c6-45a4-b1ed-3061ca328763"
+      },
+      "execution_count": 27,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "   calories  duration\n",
+            "0       420        50\n",
+            "1       380        40\n",
+            "2       390        45\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
